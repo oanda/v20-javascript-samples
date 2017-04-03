@@ -4,23 +4,23 @@ var common = require('./common');
 var config = require('./config');
 
 var argv = require('yargs')
-    .alias('c', 'configFile')
-    .nargs('c', 1)
-    .describe('c', "v20 Configuration File to use")
-    .default('c', config.defaultConfigFile())
-    .alias('i', 'instrument')
-    .nargs('i', 1)
-    .describe('i', "Instrument to trade")
-    .coerce('i', (i) => i.replace(/\//g, "_"))
-    .alias('u', 'units')
-    .nargs('u', 1)
-    .describe('u', "Units to trade")
-    .help('h')
-    .alias('h', "help")
-    .demandOption(['i', 'u'])
+    .alias('config', 'c')
+    .nargs('config', 1)
+    .describe('config', "v20 Configuration File to use")
+    .default('config', config.defaultConfigFile())
+    .alias('instrument', 'i')
+    .nargs('instrument', 1)
+    .describe('instrument', "Instrument to trade")
+    .coerce('instrument', (i) => i.replace(/\//g, "_"))
+    .alias('units', 'u')
+    .nargs('units', 1)
+    .describe('units', "Units to trade")
+    .help('help')
+    .alias('help', "h")
+    .demandOption(['instrument', 'units'])
     .argv;
 
-var conf = new config.Config(argv.configFile);
+var conf = new config.Config(argv.config);
 
 var accountID = conf.activeAccount;
 
