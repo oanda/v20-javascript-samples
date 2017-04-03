@@ -42,7 +42,7 @@ user@host: ~/v20-javascript-samples$ node src/account_details.js
 
 Following is a listing of the sample code provided.
 
-| Source File | Entry Point | Description |
-| ----------- | ----------- | ----------- |
-| `src/configure.py` | v20-configure | Create/update a v20.conf file |
-| `src/market_order_full_example.py` | v20-market-order-full-example | Limited Market Order example that does not use the v20.conf file |
+| Source File | Description | Example |
+| ----------- | ----------- | ------- |
+| `src/account/details.js` | Fetch details for the configured Account | `user@host ~/v20-javascript-samples$ node src/account/details.js` |
+| `src/order/market.js` | Create a Market Order in the configured Account | `user@host ~/v20-javascript-samples$ node src/order/market.js --instrument EUR/USD --units 100` |

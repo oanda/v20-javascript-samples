@@ -1,7 +1,7 @@
 "use strict";
 
-var common = require('./common');
-var config = require('./config');
+var common = require('../lib/common');
+var config = require('../lib/config');
 
 var argv = require('yargs')
     .alias('config', 'c')
