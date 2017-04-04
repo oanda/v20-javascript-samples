@@ -40,10 +40,10 @@ class Config {
 
     createStreamingContext() {
         let ctx = new Context(
-            this.streaming_hostname,
+            this.streamingHostname,
             this.port,
             this.ssl,
-            "sample sample javascript"
+            "oanda sample streaming javascript"
         );
 
         ctx.setToken(this.token);

@@ -1,9 +1,9 @@
 "use strict";
 
-var common = require('../lib/common');
-var config = require('../lib/config');
+let common = require('../lib/common');
+let config = require('../lib/config');
 
-var argv = require('yargs')
+let argv = require('yargs')
     .alias('config', 'c')
     .nargs('config', 1)
     .describe('config', "v20 Configuration File to use")
@@ -20,19 +20,17 @@ var argv = require('yargs')
     .demandOption(['instrument', 'units'])
     .argv;
 
-var conf = new config.Config(argv.config);
+let conf = new config.Config(argv.config);
 
-var accountID = conf.activeAccount;
+let ctx = conf.createContext();
 
-var ctx = conf.createContext();
-
-var marketOrder = new ctx.order.MarketOrderRequest({
+let marketOrder = new ctx.order.MarketOrderRequest({
     instrument: argv.instrument,
     units: argv.units
 });
 
 ctx.order.market(
-    accountID, 
+    conf.activeAccount,
     marketOrder,
     response => {
         common.handleErrorResponse(response);

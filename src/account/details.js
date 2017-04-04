@@ -1,9 +1,9 @@
 "use strict";
 
-var common = require('../lib/common');
-var config = require('../lib/config');
+let common = require('../lib/common');
+let config = require('../lib/config');
 
-var argv = require('yargs')
+let argv = require('yargs')
     .alias('config', 'c')
     .nargs('config', 1)
     .describe('config', "v20 Configuration File to use")
@@ -12,11 +12,11 @@ var argv = require('yargs')
     .alias('help', "h")
     .argv;
 
-var conf = new config.Config(argv.config);
+let conf = new config.Config(argv.config);
 
-var accountID = conf.activeAccount;
+let accountID = conf.activeAccount;
 
-var ctx = conf.createContext();
+let ctx = conf.createContext();
 
 ctx.account.get(
     accountID,
