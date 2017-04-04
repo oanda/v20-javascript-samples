@@ -46,5 +46,5 @@ Following is a listing of the sample code provided.
 | ----------- | ----------- | ------- |
 | `src/account/details.js` | Fetch details for the configured Account | `user@host ~/v20-javascript-samples$ node src/account/details.js` |
 | `src/order/market.js` | Create a Market Order in the configured Account | `user@host ~/v20-javascript-samples$ node src/order/market.js --instrument EUR/USD --units 100` |
-| `src/transaction/stream.js` | Create an Account Transaction stream | `user@host ~/v20-javascript-samples$ node src/transaction/stream.js |
-| `src/pricing/stream.js` | Create an Account Pricing stream | `user@host ~/v20-javascript-samples$ node src/pricing/stream.js |
+| `src/transaction/stream.js` | Create an Account Transaction stream | `user@host ~/v20-javascript-samples$ node src/transaction/stream.js` |
+| `src/pricing/stream.js` | Create an Account Pricing stream | `user@host ~/v20-javascript-samples$ node src/pricing/stream.js` |
